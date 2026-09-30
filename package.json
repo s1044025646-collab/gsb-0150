@@ -1,0 +1,18 @@
+{
+  "name": "discrete-pid-eval",
+  "version": "1.0.0",
+  "description": "Windows-local discrete control loop response and PID parameter evaluation backend",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "pidctl": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite src/cli.ts serve",
+    "demo": "node --experimental-sqlite src/demo.ts",
+    "test": "node --experimental-sqlite --test tests/engine.test.ts tests/service.test.ts tests/api.test.ts"
+  }
+}
